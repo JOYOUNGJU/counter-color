@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     var count = 0
+    
+    
     @IBOutlet weak var lb1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,18 @@ class ViewController: UIViewController {
         count = 0
         lb1.text = "\(count)"
     }
+    
+    @IBAction func btC(_ sender: Any) {
+        count = count + 1
+        if count%2 == 0 {
+          view.backgroundColor = UIColor.yellow
+        }
+        else {
+            view.backgroundColor = UIColor.red
+        }
+     
+    }
+    
     
 }
 
